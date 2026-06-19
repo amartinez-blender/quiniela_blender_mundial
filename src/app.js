@@ -500,8 +500,7 @@ function setView(view) {
 }
 
 function renderAll() {
-  const mode = state.configuracion.dataMode === "api" ? "Modo API" : "Modo local";
-  byId("data-mode-pill").textContent = `${mode} · ${state.partidos.length} partidos cargados`;
+  byId("data-mode-pill").textContent = `${state.partidos.length} partidos cargados`;
   renderDashboard();
   renderCharts();
   renderChartFilter();
