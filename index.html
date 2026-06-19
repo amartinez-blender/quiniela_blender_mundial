@@ -32,14 +32,22 @@
           <div class="nav-links" role="list">
             <button class="nav-link active" type="button" data-view="tabla">Tabla</button>
             <button class="nav-link" type="button" data-view="encuentros">Encuentros</button>
+            <button class="nav-link" type="button" data-view="goleo">Goleo</button>
             <button class="nav-link" type="button" data-view="llaves">Llaves</button>
+            <button class="nav-link" type="button" data-view="noticias">Noticias</button>
+            <button class="nav-link" type="button" data-view="reglas">Reglas</button>
           </div>
         </nav>
 
         <section class="hero-content">
+          <p class="eyebrow">Modo demo/manual listo para GitHub Pages</p>
           <h1>La quiniela vive mientras tus selecciones sigan en la pelea.</h1>
+          <p>
+            Consulta puntos, partidos, llaves, noticias automáticas y gráficos con datos editables desde archivos JSON.
+          </p>
           <div class="hero-actions">
             <button class="primary-action" type="button" data-view="encuentros">Ver encuentros</button>
+            <button class="secondary-action" type="button" data-view="reglas">Cómo se juega</button>
           </div>
         </section>
       </header>
@@ -135,6 +143,39 @@
           </div>
         </section>
 
+        <section id="goleo" class="view-section" data-section="goleo" aria-labelledby="goleo-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Goleo Individual</p>
+              <h2 id="goleo-title">Tabla de goleo por jugador</h2>
+            </div>
+          </div>
+
+          <div class="table-toolbar single">
+            <label class="search-field">
+              Buscar jugador, selección o dueño
+              <input id="scorer-search" type="search" placeholder="Ej. Pulisic, México, Tony..." />
+            </label>
+          </div>
+
+          <div class="table-wrap" role="region" aria-label="Tabla de goleo" tabindex="0">
+            <table class="scorers-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Jugador</th>
+                  <th>Selección</th>
+                  <th>Dueño</th>
+                  <th>Goles</th>
+                  <th>Penales</th>
+                  <th>Partidos anotando</th>
+                  <th>Último gol</th>
+                </tr>
+              </thead>
+              <tbody id="goleo-body"></tbody>
+            </table>
+          </div>
+        </section>
 
         <section id="encuentros" class="view-section" data-section="encuentros" aria-labelledby="encuentros-title">
           <div class="section-heading">
@@ -204,6 +245,42 @@
           <div class="bracket-wrap" id="bracket"></div>
         </section>
 
+        <section id="noticias" class="view-section" data-section="noticias" aria-labelledby="noticias-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Noticias</p>
+              <h2 id="noticias-title">Lo más importante de la quiniela</h2>
+            </div>
+          </div>
+          <div class="news-grid" id="news-grid"></div>
+        </section>
+
+        <section id="reglas" class="view-section" data-section="reglas" aria-labelledby="reglas-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Reglas</p>
+              <h2 id="reglas-title">Cómo gana alguien</h2>
+            </div>
+          </div>
+          <div class="rules-grid">
+            <article>
+              <h3>Puntuación</h3>
+              <p>Victoria: 3 puntos. Empate: 1 punto. Derrota: 0 puntos.</p>
+            </article>
+            <article>
+              <h3>Ganador final</h3>
+              <p>Gana la persona que tenga asignada a la selección campeona del Mundial FIFA 2026.</p>
+            </article>
+            <article>
+              <h3>Estatus</h3>
+              <p>Las selecciones eliminadas se marcan con 💀 y la campeona con 🏆.</p>
+            </article>
+            <article>
+              <h3>Modo manual</h3>
+              <p>Edita los JSON en la carpeta <strong>data</strong> para actualizar resultados, estatus y noticias.</p>
+            </article>
+          </div>
+        </section>
       </main>
     </div>
   </body>
