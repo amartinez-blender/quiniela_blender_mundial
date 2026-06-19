@@ -33,5 +33,10 @@
     "id": "daniel-marquez",
     "nombre": "Daniel Márquez",
     "selecciones": ["Inglaterra", "USA", "Nueva Zelanda", "Suecia", "Chequia", "Australia"]
+  },
+  {
+    "id": "andres",
+    "nombre": "Andrés",
+    "selecciones": ["Francia", "Bélgica", "Costa de Marfil", "Irak", "Túnez", "Haití"]
   }
 ]

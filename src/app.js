@@ -63,6 +63,8 @@ const FOOTBALL_DATA_TEAM_NAMES = {
   "Cape Verde Islands": "Cabo Verde",
   Chile: "Chile",
   Colombia: "Colombia",
+  "Côte d'Ivoire": "Costa de Marfil",
+  "Ivory Coast": "Costa de Marfil",
   Congo: "Congo",
   "Congo DR": "Congo",
   "DR Congo": "Congo",
@@ -76,7 +78,9 @@ const FOOTBALL_DATA_TEAM_NAMES = {
   France: "Francia",
   Germany: "Alemania",
   Ghana: "Ghana",
+  Haiti: "Haití",
   Iran: "Irán",
+  Iraq: "Irak",
   "IR Iran": "Irán",
   Italy: "Italia",
   Japan: "Japón",
@@ -99,6 +103,7 @@ const FOOTBALL_DATA_TEAM_NAMES = {
   Spain: "España",
   Sweden: "Suecia",
   Switzerland: "Suiza",
+  Tunisia: "Túnez",
   Turkey: "Turquía",
   Türkiye: "Turquía",
   Turkiye: "Turquía",
@@ -147,6 +152,11 @@ const FALLBACK_DATA = {
       id: "daniel-marquez",
       nombre: "Daniel Márquez",
       selecciones: ["Inglaterra", "USA", "Nueva Zelanda", "Suecia", "Chequia", "Australia"]
+    },
+    {
+      id: "andres",
+      nombre: "Andrés",
+      selecciones: ["Francia", "Bélgica", "Costa de Marfil", "Irak", "Túnez", "Haití"]
     }
   ],
   selecciones: [
@@ -160,7 +170,8 @@ const FALLBACK_DATA = {
     ["Cabo Verde", "🇨🇻"], ["Paraguay", "🇵🇾"], ["Brasil", "🇧🇷"], ["Ghana", "🇬🇭"],
     ["Congo", "🇨🇬"], ["Irán", "🇮🇷"], ["Croacia", "🇭🇷"], ["Argelia", "🇩🇿"],
     ["Inglaterra", "🏴"], ["USA", "🇺🇸"], ["Nueva Zelanda", "🇳🇿"], ["Suecia", "🇸🇪"],
-    ["Chequia", "🇨🇿"], ["Australia", "🇦🇺"], ["Francia", "🇫🇷"], ["Italia", "🇮🇹"]
+    ["Chequia", "🇨🇿"], ["Australia", "🇦🇺"], ["Francia", "🇫🇷"], ["Italia", "🇮🇹"],
+    ["Costa de Marfil", "🇨🇮"], ["Irak", "🇮🇶"], ["Túnez", "🇹🇳"], ["Haití", "🇭🇹"]
   ].map(([nombre, bandera]) => ({
     nombre,
     codigoISO: "",
