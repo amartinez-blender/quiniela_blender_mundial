@@ -293,7 +293,9 @@ main {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 255, 0.96)),
     var(--surface);
-  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  height: 310px;
   padding: 16px;
   position: relative;
   overflow: hidden;
@@ -318,7 +320,8 @@ main {
 
 .chart-card canvas {
   cursor: pointer;
-  min-height: 220px;
+  flex: 1;
+  min-height: 0;
 }
 
 .chart-filter-bar {

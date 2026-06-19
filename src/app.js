@@ -54,14 +54,18 @@ const FOOTBALL_DATA_TEAM_NAMES = {
   Argentina: "Argentina",
   Australia: "Australia",
   Austria: "Austria",
+  Belgium: "Bélgica",
   Bosnia: "Bosnia-Herzegovina",
   "Bosnia and Herzegovina": "Bosnia-Herzegovina",
   Brazil: "Brasil",
   Canada: "Canadá",
   "Cape Verde": "Cabo Verde",
   "Cape Verde Islands": "Cabo Verde",
+  Chile: "Chile",
   Colombia: "Colombia",
   Congo: "Congo",
+  "Congo DR": "Congo",
+  "DR Congo": "Congo",
   Croatia: "Croacia",
   Curacao: "Curazao",
   Curaçao: "Curazao",
@@ -74,6 +78,7 @@ const FOOTBALL_DATA_TEAM_NAMES = {
   Ghana: "Ghana",
   Iran: "Irán",
   "IR Iran": "Irán",
+  Italy: "Italia",
   Japan: "Japón",
   Jordan: "Jordania",
   Mexico: "México",
@@ -339,8 +344,11 @@ async function cargarDatosApi(config) {
     throw new Error("No hay API configurada.");
   }
 
-  const response = await fetch(config.api.baseUrl);
-  if (!response.ok) throw new Error("La API no respondió correctamente.");
+  const headers = {};
+  if (config.api.token) headers["X-Auth-Token"] = config.api.token;
+
+  const response = await fetch(config.api.baseUrl, { headers });
+  if (!response.ok) throw new Error(`La API respondió ${response.status}. Verifica baseUrl y token en configuracion.json.`);
   const raw = await response.json();
 
   return {
