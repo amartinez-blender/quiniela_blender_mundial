@@ -1,302 +1,52 @@
 [
-  {
-    "nombre": "Países Bajos",
-    "codigoISO": "NL",
-    "bandera": "🇳🇱",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "México",
-    "codigoISO": "MX",
-    "bandera": "🇲🇽",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Egipto",
-    "codigoISO": "EG",
-    "bandera": "🇪🇬",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Turquía",
-    "codigoISO": "TR",
-    "bandera": "🇹🇷",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Panamá",
-    "codigoISO": "PA",
-    "bandera": "🇵🇦",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Senegal",
-    "codigoISO": "SN",
-    "bandera": "🇸🇳",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "España",
-    "codigoISO": "ES",
-    "bandera": "🇪🇸",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Marruecos",
-    "codigoISO": "MA",
-    "bandera": "🇲🇦",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Colombia",
-    "codigoISO": "CO",
-    "bandera": "🇨🇴",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Japón",
-    "codigoISO": "JP",
-    "bandera": "🇯🇵",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Jordania",
-    "codigoISO": "JO",
-    "bandera": "🇯🇴",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Sudáfrica",
-    "codigoISO": "ZA",
-    "bandera": "🇿🇦",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Portugal",
-    "codigoISO": "PT",
-    "bandera": "🇵🇹",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Noruega",
-    "codigoISO": "NO",
-    "bandera": "🇳🇴",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Suiza",
-    "codigoISO": "CH",
-    "bandera": "🇨🇭",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Austria",
-    "codigoISO": "AT",
-    "bandera": "🇦🇹",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Corea del Sur",
-    "codigoISO": "KR",
-    "bandera": "🇰🇷",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Arabia Saudita",
-    "codigoISO": "SA",
-    "bandera": "🇸🇦",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Argentina",
-    "codigoISO": "AR",
-    "bandera": "🇦🇷",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Uruguay",
-    "codigoISO": "UY",
-    "bandera": "🇺🇾",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Escocia",
-    "codigoISO": "GB-SCT",
-    "bandera": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Uzbekistán",
-    "codigoISO": "UZ",
-    "bandera": "🇺🇿",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Bosnia-Herzegovina",
-    "codigoISO": "BA",
-    "bandera": "🇧🇦",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Qatar",
-    "codigoISO": "QA",
-    "bandera": "🇶🇦",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Alemania",
-    "codigoISO": "DE",
-    "bandera": "🇩🇪",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Ecuador",
-    "codigoISO": "EC",
-    "bandera": "🇪🇨",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Curazao",
-    "codigoISO": "CW",
-    "bandera": "🇨🇼",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Canadá",
-    "codigoISO": "CA",
-    "bandera": "🇨🇦",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Cabo Verde",
-    "codigoISO": "CV",
-    "bandera": "🇨🇻",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Paraguay",
-    "codigoISO": "PY",
-    "bandera": "🇵🇾",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Brasil",
-    "codigoISO": "BR",
-    "bandera": "🇧🇷",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Ghana",
-    "codigoISO": "GH",
-    "bandera": "🇬🇭",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Congo",
-    "codigoISO": "CD",
-    "bandera": "🇨🇩",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Irán",
-    "codigoISO": "IR",
-    "bandera": "🇮🇷",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Croacia",
-    "codigoISO": "HR",
-    "bandera": "🇭🇷",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Argelia",
-    "codigoISO": "DZ",
-    "bandera": "🇩🇿",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Inglaterra",
-    "codigoISO": "GB-ENG",
-    "bandera": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "USA",
-    "codigoISO": "US",
-    "bandera": "🇺🇸",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Nueva Zelanda",
-    "codigoISO": "NZ",
-    "bandera": "🇳🇿",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Suecia",
-    "codigoISO": "SE",
-    "bandera": "🇸🇪",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Chequia",
-    "codigoISO": "CZ",
-    "bandera": "🇨🇿",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Australia",
-    "codigoISO": "AU",
-    "bandera": "🇦🇺",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Francia",
-    "codigoISO": "FR",
-    "bandera": "🇫🇷",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Italia",
-    "codigoISO": "IT",
-    "bandera": "🇮🇹",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Bélgica",
-    "codigoISO": "BE",
-    "bandera": "🇧🇪",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Chile",
-    "codigoISO": "CL",
-    "bandera": "🇨🇱",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Costa de Marfil",
-    "codigoISO": "CI",
-    "bandera": "🇨🇮",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Irak",
-    "codigoISO": "IQ",
-    "bandera": "🇮🇶",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Túnez",
-    "codigoISO": "TN",
-    "bandera": "🇹🇳",
-    "estatus": "activa"
-  },
-  {
-    "nombre": "Haití",
-    "codigoISO": "HT",
-    "bandera": "🇭🇹",
-    "estatus": "activa"
-  }
+  { "nombre": "Países Bajos", "codigoISO": "NL", "bandera": "🇳🇱", "estatus": "activa" },
+  { "nombre": "México", "codigoISO": "MX", "bandera": "🇲🇽", "estatus": "activa" },
+  { "nombre": "Egipto", "codigoISO": "EG", "bandera": "🇪🇬", "estatus": "activa" },
+  { "nombre": "Turquía", "codigoISO": "TR", "bandera": "🇹🇷", "estatus": "activa" },
+  { "nombre": "Panamá", "codigoISO": "PA", "bandera": "🇵🇦", "estatus": "activa" },
+  { "nombre": "Senegal", "codigoISO": "SN", "bandera": "🇸🇳", "estatus": "activa" },
+  { "nombre": "España", "codigoISO": "ES", "bandera": "🇪🇸", "estatus": "activa" },
+  { "nombre": "Marruecos", "codigoISO": "MA", "bandera": "🇲🇦", "estatus": "activa" },
+  { "nombre": "Colombia", "codigoISO": "CO", "bandera": "🇨🇴", "estatus": "activa" },
+  { "nombre": "Japón", "codigoISO": "JP", "bandera": "🇯🇵", "estatus": "activa" },
+  { "nombre": "Jordania", "codigoISO": "JO", "bandera": "🇯🇴", "estatus": "activa" },
+  { "nombre": "Sudáfrica", "codigoISO": "ZA", "bandera": "🇿🇦", "estatus": "activa" },
+  { "nombre": "Portugal", "codigoISO": "PT", "bandera": "🇵🇹", "estatus": "activa" },
+  { "nombre": "Noruega", "codigoISO": "NO", "bandera": "🇳🇴", "estatus": "activa" },
+  { "nombre": "Suiza", "codigoISO": "CH", "bandera": "🇨🇭", "estatus": "activa" },
+  { "nombre": "Austria", "codigoISO": "AT", "bandera": "🇦🇹", "estatus": "activa" },
+  { "nombre": "Corea del Sur", "codigoISO": "KR", "bandera": "🇰🇷", "estatus": "activa" },
+  { "nombre": "Arabia Saudita", "codigoISO": "SA", "bandera": "🇸🇦", "estatus": "activa" },
+  { "nombre": "Argentina", "codigoISO": "AR", "bandera": "🇦🇷", "estatus": "activa" },
+  { "nombre": "Uruguay", "codigoISO": "UY", "bandera": "🇺🇾", "estatus": "activa" },
+  { "nombre": "Escocia", "codigoISO": "GB-SCT", "bandera": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "estatus": "activa" },
+  { "nombre": "Uzbekistán", "codigoISO": "UZ", "bandera": "🇺🇿", "estatus": "activa" },
+  { "nombre": "Bosnia-Herzegovina", "codigoISO": "BA", "bandera": "🇧🇦", "estatus": "activa" },
+  { "nombre": "Qatar", "codigoISO": "QA", "bandera": "🇶🇦", "estatus": "activa" },
+  { "nombre": "Alemania", "codigoISO": "DE", "bandera": "🇩🇪", "estatus": "activa" },
+  { "nombre": "Ecuador", "codigoISO": "EC", "bandera": "🇪🇨", "estatus": "activa" },
+  { "nombre": "Curazao", "codigoISO": "CW", "bandera": "🇨🇼", "estatus": "activa" },
+  { "nombre": "Canadá", "codigoISO": "CA", "bandera": "🇨🇦", "estatus": "activa" },
+  { "nombre": "Cabo Verde", "codigoISO": "CV", "bandera": "🇨🇻", "estatus": "activa" },
+  { "nombre": "Paraguay", "codigoISO": "PY", "bandera": "🇵🇾", "estatus": "activa" },
+  { "nombre": "Brasil", "codigoISO": "BR", "bandera": "🇧🇷", "estatus": "activa" },
+  { "nombre": "Ghana", "codigoISO": "GH", "bandera": "🇬🇭", "estatus": "activa" },
+  { "nombre": "Congo", "codigoISO": "CD", "bandera": "🇨🇩", "estatus": "activa" },
+  { "nombre": "Irán", "codigoISO": "IR", "bandera": "🇮🇷", "estatus": "activa" },
+  { "nombre": "Croacia", "codigoISO": "HR", "bandera": "🇭🇷", "estatus": "activa" },
+  { "nombre": "Argelia", "codigoISO": "DZ", "bandera": "🇩🇿", "estatus": "activa" },
+  { "nombre": "Inglaterra", "codigoISO": "GB-ENG", "bandera": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "estatus": "activa" },
+  { "nombre": "USA", "codigoISO": "US", "bandera": "🇺🇸", "estatus": "activa" },
+  { "nombre": "Nueva Zelanda", "codigoISO": "NZ", "bandera": "🇳🇿", "estatus": "activa" },
+  { "nombre": "Suecia", "codigoISO": "SE", "bandera": "🇸🇪", "estatus": "activa" },
+  { "nombre": "Chequia", "codigoISO": "CZ", "bandera": "🇨🇿", "estatus": "activa" },
+  { "nombre": "Australia", "codigoISO": "AU", "bandera": "🇦🇺", "estatus": "activa" },
+  { "nombre": "Francia", "codigoISO": "FR", "bandera": "🇫🇷", "estatus": "activa" },
+  { "nombre": "Italia", "codigoISO": "IT", "bandera": "🇮🇹", "estatus": "activa" },
+  { "nombre": "Bélgica", "codigoISO": "BE", "bandera": "🇧🇪", "estatus": "activa" },
+  { "nombre": "Chile", "codigoISO": "CL", "bandera": "🇨🇱", "estatus": "activa" },
+  { "nombre": "Costa de Marfil", "codigoISO": "CI", "bandera": "🇨🇮", "estatus": "activa" },
+  { "nombre": "Irak", "codigoISO": "IQ", "bandera": "🇮🇶", "estatus": "activa" },
+  { "nombre": "Túnez", "codigoISO": "TN", "bandera": "🇹🇳", "estatus": "activa" },
+  { "nombre": "Haití", "codigoISO": "HT", "bandera": "🇭🇹", "estatus": "activa" }
 ]
