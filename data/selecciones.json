@@ -57,7 +57,7 @@
     "nombre": "Japón",
     "codigoISO": "JP",
     "bandera": "🇯🇵",
-    "estatus": "activa"
+    "estatus": "eliminada"
   },
   {
     "nombre": "Jordania",
@@ -183,7 +183,7 @@
     "nombre": "Brasil",
     "codigoISO": "BR",
     "bandera": "🇧🇷",
-    "estatus": "eliminada"
+    "estatus": "activa"
   },
   {
     "nombre": "Ghana",
