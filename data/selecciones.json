@@ -147,7 +147,7 @@
     "nombre": "Alemania",
     "codigoISO": "DE",
     "bandera": "🇩🇪",
-    "estatus": "eliminada"
+    "estatus": "activa"
   },
   {
     "nombre": "Ecuador",
@@ -177,7 +177,7 @@
     "nombre": "Paraguay",
     "codigoISO": "PY",
     "bandera": "🇵🇾",
-    "estatus": "activa"
+    "estatus": "eliminada"
   },
   {
     "nombre": "Brasil",
