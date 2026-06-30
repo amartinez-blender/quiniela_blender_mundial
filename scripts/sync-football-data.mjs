@@ -308,28 +308,26 @@ function buildStatusMap(partidos, standings) {
     });
   });
 
-  // Paso 2: equipos con partidos de grupo aún pendientes (no se pueden eliminar todavía)
-  const hasGroupGamePending = new Set();
-  partidos.forEach((match) => {
-    if (match.fase === "Fase de grupos" && !isPlayed(match)) {
-      [match.local, match.visitante].forEach((team) => {
-        if (!isPlaceholderTeam(team)) hasGroupGamePending.add(team);
-      });
-    }
-  });
-
-  // Paso 3: standings de la API — solo marcar como eliminada si ya terminaron todos sus juegos de grupo
+  // Paso 2: standings de la API (si devuelve datos útiles con ELIMINATED/QUALIFIED)
   standings.forEach((standing) => {
     (standing.table || []).forEach((row) => {
       const name = teamName(row.team?.name);
       if (!name || isPlaceholderTeam(name)) return;
-      if ((row.status === "ELIMINATED" || row.status === "eliminated") && !hasGroupGamePending.has(name)) {
+      if (row.status === "ELIMINATED" || row.status === "eliminated") {
         statusByTeam.set(name, "eliminada");
       }
       if (row.status === "QUALIFIED" || row.status === "qualified") {
         statusByTeam.set(name, "activa");
       }
     });
+  });
+
+  // Paso 3: calcular eliminaciones de fase de grupos desde los resultados reales
+  // En cada grupo de 4 equipos, cuando todos los partidos del grupo estén jugados,
+  // los 2 últimos quedan eliminados y los 2 primeros avanzan.
+  const groupResults = calcularEliminacionesPorGrupo(partidos);
+  groupResults.forEach((estatus, nombre) => {
+    statusByTeam.set(nombre, estatus);
   });
 
   // Paso 4: eliminaciones definitivas por resultado en fase de eliminación directa
@@ -342,6 +340,63 @@ function buildStatusMap(partidos, standings) {
     if (isKnockout(match.fase) && loser && !isPlaceholderTeam(loser)) {
       statusByTeam.set(loser, "eliminada");
     }
+  });
+
+  return statusByTeam;
+}
+
+/**
+ * Calcula qué equipos quedan eliminados en la fase de grupos.
+ * Para cada grupo: si todos los partidos del grupo están jugados,
+ * los 2 primeros en la tabla avanzan (activa) y los 2 últimos se eliminan.
+ * Si el grupo aún tiene partidos pendientes, no se toca el estatus de nadie.
+ */
+function calcularEliminacionesPorGrupo(partidos) {
+  const resultsByGroup = new Map();
+
+  // Recopilar partidos de la fase de grupos por letra de grupo
+  partidos.forEach((match) => {
+    if (match.fase !== "Fase de grupos" || !match.grupo) return;
+    if (!resultsByGroup.has(match.grupo)) resultsByGroup.set(match.grupo, []);
+    resultsByGroup.get(match.grupo).push(match);
+  });
+
+  const statusByTeam = new Map();
+
+  resultsByGroup.forEach((matches, grupo) => {
+    // Si algún partido del grupo no está jugado, no podemos saber los eliminados
+    if (matches.some((m) => !isPlayed(m))) return;
+
+    // Calcular estadísticas de cada equipo en el grupo
+    const stats = new Map();
+    matches.forEach((match) => {
+      for (const [equipo, gf, gc] of [
+        [match.local, match.golesLocal, match.golesVisitante],
+        [match.visitante, match.golesVisitante, match.golesLocal]
+      ]) {
+        if (isPlaceholderTeam(equipo)) continue;
+        const s = stats.get(equipo) || { equipo, pts: 0, gf: 0, gc: 0, dg: 0, pg: 0 };
+        s.gf += gf;
+        s.gc += gc;
+        s.dg += gf - gc;
+        if (gf > gc) { s.pts += 3; s.pg += 1; }
+        else if (gf === gc) { s.pts += 1; }
+        stats.set(equipo, s);
+      }
+    });
+
+    // Ordenar: puntos DESC → diferencia de goles DESC → goles a favor DESC → nombre ASC
+    const tabla = [...stats.values()].sort((a, b) =>
+      b.pts - a.pts || b.dg - a.dg || b.gf - a.gf || a.equipo.localeCompare(b.equipo, "es")
+    );
+
+    if (tabla.length < 4) return; // grupo incompleto en datos
+
+    console.log(`Grupo ${grupo}: ${tabla.map((t, i) => `${i + 1}. ${t.equipo} (${t.pts}pts)`).join(", ")}`);
+
+    // Los 2 primeros avanzan, los 2 últimos quedan eliminados
+    tabla.slice(0, 2).forEach((t) => statusByTeam.set(t.equipo, "activa"));
+    tabla.slice(2).forEach((t) => statusByTeam.set(t.equipo, "eliminada"));
   });
 
   return statusByTeam;
