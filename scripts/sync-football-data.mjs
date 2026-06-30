@@ -300,21 +300,39 @@ async function updateTeamStatuses(partidos, standings) {
 
 function buildStatusMap(partidos, standings) {
   const statusByTeam = new Map();
+
+  // Paso 1: todos los equipos conocidos parten como activos
   partidos.forEach((match) => {
     [match.local, match.visitante].forEach((team) => {
       if (!isPlaceholderTeam(team)) statusByTeam.set(team, "activa");
     });
   });
 
+  // Paso 2: equipos con partidos de grupo aún pendientes (no se pueden eliminar todavía)
+  const hasGroupGamePending = new Set();
+  partidos.forEach((match) => {
+    if (match.fase === "Fase de grupos" && !isPlayed(match)) {
+      [match.local, match.visitante].forEach((team) => {
+        if (!isPlaceholderTeam(team)) hasGroupGamePending.add(team);
+      });
+    }
+  });
+
+  // Paso 3: standings de la API — solo marcar como eliminada si ya terminaron todos sus juegos de grupo
   standings.forEach((standing) => {
     (standing.table || []).forEach((row) => {
       const name = teamName(row.team?.name);
       if (!name || isPlaceholderTeam(name)) return;
-      if (row.status === "ELIMINATED" || row.status === "eliminated") statusByTeam.set(name, "eliminada");
-      if (row.status === "QUALIFIED" || row.status === "qualified") statusByTeam.set(name, "activa");
+      if ((row.status === "ELIMINATED" || row.status === "eliminated") && !hasGroupGamePending.has(name)) {
+        statusByTeam.set(name, "eliminada");
+      }
+      if (row.status === "QUALIFIED" || row.status === "qualified") {
+        statusByTeam.set(name, "activa");
+      }
     });
   });
 
+  // Paso 4: eliminaciones definitivas por resultado en fase de eliminación directa
   partidos.filter(isPlayed).forEach((match) => {
     const winner = winnerOf(match);
     const loser = loserOf(match);
