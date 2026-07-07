@@ -15,7 +15,7 @@
     "nombre": "Egipto",
     "codigoISO": "EG",
     "bandera": "🇪🇬",
-    "estatus": "activa"
+    "estatus": "eliminada"
   },
   {
     "nombre": "Turquía",
@@ -111,7 +111,7 @@
     "nombre": "Argentina",
     "codigoISO": "AR",
     "bandera": "🇦🇷",
-    "estatus": "eliminada"
+    "estatus": "activa"
   },
   {
     "nombre": "Uruguay",
