@@ -111,7 +111,7 @@
     "nombre": "Argentina",
     "codigoISO": "AR",
     "bandera": "🇦🇷",
-    "estatus": "eliminada"
+    "estatus": "activa"
   },
   {
     "nombre": "Uruguay",
@@ -219,7 +219,7 @@
     "nombre": "Inglaterra",
     "codigoISO": "GB-ENG",
     "bandera": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-    "estatus": "activa"
+    "estatus": "eliminada"
   },
   {
     "nombre": "USA",
