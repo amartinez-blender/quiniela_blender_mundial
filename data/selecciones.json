@@ -39,7 +39,7 @@
     "nombre": "España",
     "codigoISO": "ES",
     "bandera": "🇪🇸",
-    "estatus": "activa"
+    "estatus": "campeona"
   },
   {
     "nombre": "Marruecos",
@@ -111,7 +111,7 @@
     "nombre": "Argentina",
     "codigoISO": "AR",
     "bandera": "🇦🇷",
-    "estatus": "activa"
+    "estatus": "eliminada"
   },
   {
     "nombre": "Uruguay",
